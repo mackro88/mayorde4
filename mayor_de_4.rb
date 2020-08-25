@@ -1,15 +1,16 @@
 a = ARGV[00].to_f
 b = ARGV[01].to_f
 c = ARGV[02].to_f
+d = ARGV[04].to_f
 
-unless a != b && a != c && b != c
+if a == b && b == c && c == d 
     puts "Debes ingresar números distintos"
-else
-    if b < a && c < a
-        puts "El número #{a} es el mayor" 
-    elsif c < b && a < b
-        puts "El número #{b} es el mayor" 
-    else a < c && b < c
-        puts "El número #{c} es el mayor" 
-    end
+elsif a > b && a > c && a > d
+    puts "El número #{a} es el mayor" 
+elsif b > a && b > c && b > d
+    puts "El número #{b} es el mayor" 
+elsif c > a && c > b && c > d
+    puts "El número #{c} es el mayor" 
+else d > a && d > b && d > c
+    puts "El número #{d} es el mayor" 
 end
